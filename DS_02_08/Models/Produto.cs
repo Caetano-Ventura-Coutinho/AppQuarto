@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.DotNet.Scaffolding.Shared.Messaging;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 namespace DS_02_08.Models
     
 {
@@ -20,8 +22,8 @@ namespace DS_02_08.Models
 
         [Display(Name = "Preço")]
         [Required(ErrorMessage = "O preço é obrigatório")]
-        [RegularExpression("^\\d+(.\\d{2})", ErrorMessage = "Preço inválido")]
-        public double Preco { get; set;}
+        [RegularExpression("^\\d+(,\\d{2})", ErrorMessage = "Preço inválido")]
+        public decimal Preco { get; set;}
 
         [Display(Name = "Marca")]
         [Required(ErrorMessage = "A marca é obrigatório")]

@@ -35,6 +35,8 @@ namespace DS_02_08.Controllers
         [HttpPost]
         public IActionResult CadastrarProduto(Produto objProduto)
         {
+    
+
             if (ModelState.IsValid)
             {
                 return View("ResultadoProduto", objProduto);
